@@ -1,3 +1,13 @@
+Mock username & password for testing:
+username: antra1
+password: password
+
+username: antra2
+password: password
+
+username: antra3
+password: password
+
 # SimpleAuth
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.5.
