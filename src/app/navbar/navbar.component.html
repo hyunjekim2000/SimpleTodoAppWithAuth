@@ -1,0 +1,12 @@
+<nav class="navbar">
+  <a routerLink="/home">Home</a>
+
+  <a routerLink="/todo">Todo</a>
+
+  @if (isLoggedIn()) {
+  <a routerLink="/" (click)="logout()">Logout</a>
+  } @else {
+
+  <a routerLink="/login">Login</a>
+  }
+</nav>

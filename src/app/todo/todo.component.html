@@ -1,0 +1,43 @@
+<form [formGroup]="form" class="form-container">
+  <div class="input-box">
+    <label for="todo">Add Todo:</label>
+    <input id="todo" formControlName="todo" />
+    <button type="button" (click)="addTodo()">Add Todo</button>
+  </div>
+
+  <div class="todos">
+    <h3>Incomplete Todos</h3>
+    <ul>
+      @for(todo of incompleteList; track todo) {
+      <li>
+        <input
+          type="checkbox"
+          [checked]="todo.completed"
+          (change)="toggleTodo(todo)"
+        />
+        {{ todo.todo }}
+        <button type="button" (click)="removeTodo(todo)">X</button>
+      </li>
+      }
+    </ul>
+  </div>
+
+  <div class="todos">
+    <h3>Completed Todos</h3>
+    <ul>
+      @for(todo of completedList; track todo) {
+      <li>
+        <input
+          type="checkbox"
+          [checked]="todo.completed"
+          (change)="toggleTodo(todo)"
+        />
+        {{ todo.todo }}<
+        <button type="button" (click)="removeTodo(todo)">X</button>
+      </li>
+      }
+    </ul>
+  </div>
+
+  <button type="button" (click)="saveChanges()">Save</button>
+</form>

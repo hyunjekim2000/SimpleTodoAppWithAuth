@@ -1,0 +1,14 @@
+.navbar {
+  display: flex;
+  justify-content: center;
+  font-size: 1.3rem;
+  gap: 50px;
+  width: 100vw;
+  background-color: lightblue;
+  padding: 1.2rem;
+  transition: 0.3s ease;
+}
+
+.navbar a:hover {
+  background-color: white;
+}
